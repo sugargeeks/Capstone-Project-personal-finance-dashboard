@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinTrack – Personal Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     LAYOUT WRAPPER
+     ============================================================ -->
+<div class="layout">
+
+  <!-- ==========================================================
+       SIDEBAR NAVIGATION
+       ========================================================== -->
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <span class="sidebar__logo">&#9670;</span>
+      <span class="sidebar__brand-name">FinTrack</span>
+    </div>
+
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <ul class="sidebar__list">
+        <li class="sidebar__item sidebar__item--active">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon" aria-hidden="true">&#9632;</span>
+            Overview
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon" aria-hidden="true">&#9654;</span>
+            Transactions
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon" aria-hidden="true">&#9670;</span>
+            Budget Categories
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon" aria-hidden="true">&#9733;</span>
+            Savings Goals
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon" aria-hidden="true">&#9873;</span>
+            Bills &amp; Reminders
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon" aria-hidden="true">&#9999;</span>
+            Reports
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">
+            <span class="sidebar__icon" aria-hidden="true">&#9728;</span>
+            Profile
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__user-mini">
+        <div class="sidebar__avatar" aria-hidden="true">SN</div>
+        <div class="sidebar__user-info">
+          <span class="sidebar__user-name">Siti Nurlia</span>
+          <span class="sidebar__user-role">Personal</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================
+       MAIN CONTENT AREA
+       ========================================================== -->
+  <main class="main">
+
+    <!-- --------------------------------------------------------
+         TOP NAVIGATION BAR
+         -------------------------------------------------------- -->
+    <header class="topbar">
+      <div class="topbar__title">
+        <h1 class="topbar__heading">Finance Dashboard</h1>
+        <span class="topbar__period">November 2026</span>
+      </div>
+
+      <div class="topbar__actions">
+        <!-- Search -->
+        <div class="topbar__search" role="search">
+          <span class="topbar__search-icon" aria-hidden="true">&#128269;</span>
+          <input
+            type="search"
+            class="topbar__search-input"
+            placeholder="Cari transaksi…"
+            aria-label="Cari transaksi"
+          />
+        </div>
+
+        <!-- Notification badge -->
+        <button class="topbar__notif" aria-label="3 notifikasi baru">
+          <span class="topbar__notif-icon" aria-hidden="true">&#128276;</span>
+          <span class="topbar__badge" aria-hidden="true">3</span>
+        </button>
+
+        <!-- User profile -->
+        <div class="topbar__profile">
+          <div class="topbar__avatar" aria-hidden="true">SN</div>
+          <div class="topbar__profile-info">
+            <span class="topbar__profile-name">Siti Nurlia Kilmas</span>
+            <span class="topbar__profile-sub">Premium Account</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- --------------------------------------------------------
+         DASHBOARD CONTENT
+         -------------------------------------------------------- -->
+    <div class="content">
+
+      <!-- ------------------------------------------------------
+           SECTION 1 — KPI SUMMARY CARDS
+           ------------------------------------------------------ -->
+      <section class="section" aria-labelledby="kpi-heading">
+        <h2 class="section__title" id="kpi-heading">Ringkasan Keuangan</h2>
+        <div class="kpi-grid">
+
+          <article class="kpi-card kpi-card--balance">
+            <div class="kpi-card__header">
+              <span class="kpi-card__label">Total Balance</span>
+              <span class="kpi-card__icon" aria-hidden="true">&#128176;</span>
+            </div>
+            <p class="kpi-card__value">Rp 48.500.000</p>
+            <p class="kpi-card__trend kpi-card__trend--up">&#9650; 3,2% dari bulan lalu</p>
+          </article>
+
+          <article class="kpi-card kpi-card--income">
+            <div class="kpi-card__header">
+              <span class="kpi-card__label">Monthly Income</span>
+              <span class="kpi-card__icon" aria-hidden="true">&#128200;</span>
+            </div>
+            <p class="kpi-card__value">Rp 14.200.000</p>
+            <p class="kpi-card__trend kpi-card__trend--up">&#9650; 5,1% dari bulan lalu</p>
+          </article>
+
+          <article class="kpi-card kpi-card--expense">
+            <div class="kpi-card__header">
+              <span class="kpi-card__label">Monthly Expenses</span>
+              <span class="kpi-card__icon" aria-hidden="true">&#128201;</span>
+            </div>
+            <p class="kpi-card__value">Rp 8.650.000</p>
+            <p class="kpi-card__trend kpi-card__trend--down">&#9660; 2,4% dari bulan lalu</p>
+          </article>
+
+          <article class="kpi-card kpi-card--savings">
+            <div class="kpi-card__header">
+              <span class="kpi-card__label">Net Monthly Savings</span>
+              <span class="kpi-card__icon" aria-hidden="true">&#127381;</span>
+            </div>
+            <p class="kpi-card__value">Rp 5.550.000</p>
+            <p class="kpi-card__trend kpi-card__trend--up">&#9650; 39,1% saving rate</p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------
+           SECTION 2 — CASHFLOW CHART + EXPENSE CATEGORIES
+           ------------------------------------------------------ -->
+      <div class="two-col-grid">
+
+        <!-- Monthly Cashflow & Expense Trend -->
+        <section class="card section--chart" aria-labelledby="cashflow-heading">
+          <h2 class="card__title" id="cashflow-heading">Monthly Cashflow &amp; Expense Trend</h2>
+          <div class="chart-legend">
+            <span class="legend-dot legend-dot--income"></span><span>Pemasukan</span>
+            <span class="legend-dot legend-dot--expense"></span><span>Pengeluaran</span>
+          </div>
+          <div class="bar-chart" role="img" aria-label="Grafik pemasukan dan pengeluaran 6 bulan terakhir">
+            <!-- Jun -->
+            <div class="bar-group">
+              <div class="bar-wrap">
+                <div class="bar bar--income" style="--h:72%"><span class="bar__tip">12,6 jt</span></div>
+                <div class="bar bar--expense" style="--h:58%"><span class="bar__tip">8,1 jt</span></div>
+              </div>
+              <span class="bar-label">Jun</span>
+            </div>
+            <!-- Jul -->
+            <div class="bar-group">
+              <div class="bar-wrap">
+                <div class="bar bar--income" style="--h:78%"><span class="bar__tip">13,5 jt</span></div>
+                <div class="bar bar--expense" style="--h:62%"><span class="bar__tip">8,7 jt</span></div>
+              </div>
+              <span class="bar-label">Jul</span>
+            </div>
+            <!-- Agu -->
+            <div class="bar-group">
+              <div class="bar-wrap">
+                <div class="bar bar--income" style="--h:75%"><span class="bar__tip">13,0 jt</span></div>
+                <div class="bar bar--expense" style="--h:70%"><span class="bar__tip">9,3 jt</span></div>
+              </div>
+              <span class="bar-label">Agu</span>
+            </div>
+            <!-- Sep -->
+            <div class="bar-group">
+              <div class="bar-wrap">
+                <div class="bar bar--income" style="--h:80%"><span class="bar__tip">13,8 jt</span></div>
+                <div class="bar bar--expense" style="--h:66%"><span class="bar__tip">8,9 jt</span></div>
+              </div>
+              <span class="bar-label">Sep</span>
+            </div>
+            <!-- Okt -->
+            <div class="bar-group">
+              <div class="bar-wrap">
+                <div class="bar bar--income" style="--h:77%"><span class="bar__tip">13,5 jt</span></div>
+                <div class="bar bar--expense" style="--h:64%"><span class="bar__tip">8,9 jt</span></div>
+              </div>
+              <span class="bar-label">Okt</span>
+            </div>
+            <!-- Nov (active) -->
+            <div class="bar-group bar-group--active">
+              <div class="bar-wrap">
+                <div class="bar bar--income" style="--h:100%"><span class="bar__tip">14,2 jt</span></div>
+                <div class="bar bar--expense" style="--h:61%"><span class="bar__tip">8,7 jt</span></div>
+              </div>
+              <span class="bar-label">Nov</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Expense by Category -->
+        <section class="card" aria-labelledby="expense-cat-heading">
+          <h2 class="card__title" id="expense-cat-heading">Expense by Category</h2>
+          <ul class="expense-list">
+
+            <li class="expense-item">
+              <div class="expense-item__info">
+                <span class="expense-item__dot" style="background:var(--color-cat-1)"></span>
+                <span class="expense-item__name">Housing &amp; Utilities</span>
+              </div>
+              <div class="expense-item__right">
+                <span class="expense-item__amount">Rp 2.800.000</span>
+                <span class="expense-item__pct">32,4%</span>
+              </div>
+              <div class="expense-item__bar-wrap">
+                <div class="expense-item__bar" style="width:32.4%;background:var(--color-cat-1)"></div>
+              </div>
+            </li>
+
+            <li class="expense-item">
+              <div class="expense-item__info">
+                <span class="expense-item__dot" style="background:var(--color-cat-2)"></span>
+                <span class="expense-item__name">Food &amp; Groceries</span>
+              </div>
+              <div class="expense-item__right">
+                <span class="expense-item__amount">Rp 2.100.000</span>
+                <span class="expense-item__pct">24,3%</span>
+              </div>
+              <div class="expense-item__bar-wrap">
+                <div class="expense-item__bar" style="width:24.3%;background:var(--color-cat-2)"></div>
+              </div>
+            </li>
+
+            <li class="expense-item">
+              <div class="expense-item__info">
+                <span class="expense-item__dot" style="background:var(--color-cat-3)"></span>
+                <span class="expense-item__name">Transportation</span>
+              </div>
+              <div class="expense-item__right">
+                <span class="expense-item__amount">Rp 1.450.000</span>
+                <span class="expense-item__pct">16,8%</span>
+              </div>
+              <div class="expense-item__bar-wrap">
+                <div class="expense-item__bar" style="width:16.8%;background:var(--color-cat-3)"></div>
+              </div>
+            </li>
+
+            <li class="expense-item">
+              <div class="expense-item__info">
+                <span class="expense-item__dot" style="background:var(--color-cat-4)"></span>
+                <span class="expense-item__name">Subscriptions &amp; Lifestyle</span>
+              </div>
+              <div class="expense-item__right">
+                <span class="expense-item__amount">Rp 1.200.000</span>
+                <span class="expense-item__pct">13,9%</span>
+              </div>
+              <div class="expense-item__bar-wrap">
+                <div class="expense-item__bar" style="width:13.9%;background:var(--color-cat-4)"></div>
+              </div>
+            </li>
+
+            <li class="expense-item">
+              <div class="expense-item__info">
+                <span class="expense-item__dot" style="background:var(--color-cat-5)"></span>
+                <span class="expense-item__name">Healthcare</span>
+              </div>
+              <div class="expense-item__right">
+                <span class="expense-item__amount">Rp 1.100.000</span>
+                <span class="expense-item__pct">12,7%</span>
+              </div>
+              <div class="expense-item__bar-wrap">
+                <div class="expense-item__bar" style="width:12.7%;background:var(--color-cat-5)"></div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </div><!-- /.two-col-grid -->
+
+      <!-- ------------------------------------------------------
+           SECTION 3 — SAVINGS GOALS
+           ------------------------------------------------------ -->
+      <section class="section" aria-labelledby="savings-heading">
+        <h2 class="section__title" id="savings-heading">Savings Goals</h2>
+        <div class="savings-grid">
+
+          <article class="savings-card">
+            <div class="savings-card__header">
+              <span class="savings-card__icon" aria-hidden="true">&#128737;</span>
+              <div>
+                <h3 class="savings-card__name">Dana Darurat</h3>
+                <span class="savings-card__deadline">Target: Des 2026</span>
+              </div>
+            </div>
+            <div class="savings-card__amounts">
+              <span class="savings-card__current">Rp 14.500.000</span>
+              <span class="savings-card__target">/ Rp 20.000.000</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Dana Darurat 72% tercapai">
+              <div class="progress-bar__fill" style="width:72%"></div>
+            </div>
+            <span class="savings-card__pct">72% tercapai</span>
+          </article>
+
+          <article class="savings-card">
+            <div class="savings-card__header">
+              <span class="savings-card__icon" aria-hidden="true">&#9992;</span>
+              <div>
+                <h3 class="savings-card__name">Dana Liburan</h3>
+                <span class="savings-card__deadline">Target: Mar 2027</span>
+              </div>
+            </div>
+            <div class="savings-card__amounts">
+              <span class="savings-card__current">Rp 3.200.000</span>
+              <span class="savings-card__target">/ Rp 8.000.000</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="Dana Liburan 40% tercapai">
+              <div class="progress-bar__fill progress-bar__fill--amber" style="width:40%"></div>
+            </div>
+            <span class="savings-card__pct">40% tercapai</span>
+          </article>
+
+          <article class="savings-card">
+            <div class="savings-card__header">
+              <span class="savings-card__icon" aria-hidden="true">&#128218;</span>
+              <div>
+                <h3 class="savings-card__name">Dana Upgrade Skill</h3>
+                <span class="savings-card__deadline">Target: Jun 2027</span>
+              </div>
+            </div>
+            <div class="savings-card__amounts">
+              <span class="savings-card__current">Rp 1.750.000</span>
+              <span class="savings-card__target">/ Rp 5.000.000</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" aria-label="Dana Upgrade Skill 35% tercapai">
+              <div class="progress-bar__fill progress-bar__fill--purple" style="width:35%"></div>
+            </div>
+            <span class="savings-card__pct">35% tercapai</span>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------
+           SECTION 4 — RECENT TRANSACTIONS + BILLS + PROFILE
+           ------------------------------------------------------ -->
+      <div class="three-col-grid">
+
+        <!-- Recent Transactions -->
+        <section class="card card--span2" aria-labelledby="tx-heading">
+          <h2 class="card__title" id="tx-heading">Recent Transactions</h2>
+          <table class="tx-table">
+            <thead>
+              <tr>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Deskripsi</th>
+                <th scope="col">Kategori</th>
+                <th scope="col" class="tx-table__num">Jumlah</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>22 Nov</td>
+                <td>Gaji Bulanan</td>
+                <td><span class="tx-badge tx-badge--income">Income</span></td>
+                <td class="tx-table__num tx-amount--in">+Rp 14.200.000</td>
+              </tr>
+              <tr>
+                <td>21 Nov</td>
+                <td>Tokopedia – Belanja Dapur</td>
+                <td><span class="tx-badge tx-badge--food">Food</span></td>
+                <td class="tx-table__num tx-amount--out">−Rp 345.000</td>
+              </tr>
+              <tr>
+                <td>20 Nov</td>
+                <td>PLN Listrik &amp; Air</td>
+                <td><span class="tx-badge tx-badge--util">Utilities</span></td>
+                <td class="tx-table__num tx-amount--out">−Rp 480.000</td>
+              </tr>
+              <tr>
+                <td>19 Nov</td>
+                <td>GrabFood – Makan Siang</td>
+                <td><span class="tx-badge tx-badge--food">Food</span></td>
+                <td class="tx-table__num tx-amount--out">−Rp 85.000</td>
+              </tr>
+              <tr>
+                <td>18 Nov</td>
+                <td>Netflix Premium</td>
+                <td><span class="tx-badge tx-badge--sub">Subs</span></td>
+                <td class="tx-table__num tx-amount--out">−Rp 186.000</td>
+              </tr>
+              <tr>
+                <td>17 Nov</td>
+                <td>Grab – Ojek Online</td>
+                <td><span class="tx-badge tx-badge--transport">Transport</span></td>
+                <td class="tx-table__num tx-amount--out">−Rp 55.000</td>
+              </tr>
+              <tr>
+                <td>15 Nov</td>
+                <td>Apotek K-24</td>
+                <td><span class="tx-badge tx-badge--health">Health</span></td>
+                <td class="tx-table__num tx-amount--out">−Rp 230.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Bills & Reminders + Profile (stacked) -->
+        <div class="side-stack">
+
+          <!-- Bills & Reminders -->
+          <section class="card" aria-labelledby="bills-heading">
+            <h2 class="card__title" id="bills-heading">Bills &amp; Reminders</h2>
+            <ul class="bills-list">
+              <li class="bills-item bills-item--urgent">
+                <div class="bills-item__left">
+                  <span class="bills-item__dot"></span>
+                  <span class="bills-item__name">Cicilan KPR</span>
+                </div>
+                <div class="bills-item__right">
+                  <span class="bills-item__amount">Rp 2.300.000</span>
+                  <span class="bills-item__due">Jatuh tempo: 25 Nov</span>
+                </div>
+              </li>
+              <li class="bills-item bills-item--warning">
+                <div class="bills-item__left">
+                  <span class="bills-item__dot"></span>
+                  <span class="bills-item__name">Kartu Kredit BCA</span>
+                </div>
+                <div class="bills-item__right">
+                  <span class="bills-item__amount">Rp 1.750.000</span>
+                  <span class="bills-item__due">Jatuh tempo: 28 Nov</span>
+                </div>
+              </li>
+              <li class="bills-item bills-item--ok">
+                <div class="bills-item__left">
+                  <span class="bills-item__dot"></span>
+                  <span class="bills-item__name">Spotify Premium</span>
+                </div>
+                <div class="bills-item__right">
+                  <span class="bills-item__amount">Rp 54.990</span>
+                  <span class="bills-item__due">Jatuh tempo: 30 Nov</span>
+                </div>
+              </li>
+              <li class="bills-item bills-item--ok">
+                <div class="bills-item__left">
+                  <span class="bills-item__dot"></span>
+                  <span class="bills-item__name">Gym Membership</span>
+                </div>
+                <div class="bills-item__right">
+                  <span class="bills-item__amount">Rp 350.000</span>
+                  <span class="bills-item__due">Jatuh tempo: 1 Des</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Profile Card -->
+          <section class="card profile-card" aria-labelledby="profile-heading">
+            <div class="profile-card__avatar" aria-hidden="true">SN</div>
+            <h2 class="profile-card__name" id="profile-heading">Siti Nurlia Kilmas</h2>
+            <span class="profile-card__badge">Premium Account</span>
+            <dl class="profile-card__stats">
+              <div class="profile-card__stat">
+                <dt>Member Sejak</dt>
+                <dd>Jan 2023</dd>
+              </div>
+              <div class="profile-card__stat">
+                <dt>Saving Rate</dt>
+                <dd>39,1%</dd>
+              </div>
+              <div class="profile-card__stat">
+                <dt>Goals Aktif</dt>
+                <dd>3</dd>
+              </div>
+            </dl>
+          </section>
+
+        </div><!-- /.side-stack -->
+
+      </div><!-- /.three-col-grid -->
+
+    </div><!-- /.content -->
+  </main><!-- /.main -->
+</div><!-- /.layout -->
+
+</body>
+</html>
